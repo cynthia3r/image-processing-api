@@ -1,0 +1,29 @@
+{
+  "name": "image-processing-api",
+  "version": "1.0.0",
+  "description": "This project is done as part of Udacity FullStack JavaScript Developer Nanodegree program",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cynthia3r/image-processing-api.git"
+  },
+  "author": "cynthia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cynthia3r/image-processing-api/issues"
+  },
+  "homepage": "https://github.com/cynthia3r/image-processing-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/node": "^15.12.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}
