@@ -13,11 +13,14 @@
       "no-var": "error",
       "prefer-const": "error"
     },
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
-      "ecmaVersion": 2017
+      "ecmaVersion": 6,
+      "sourceType": "module"
     },
     "env": {
       "node": true,
-      "es6": true
+      "es6": true,
+      "jasmine": true
     }
 }
