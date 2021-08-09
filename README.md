@@ -36,7 +36,7 @@ Note: `specified_image_filename` is the name of any image file (without extensio
 The processed image with `specified_image_width` and `specified_image_height` gets generated inside `thumbnails` folder.
 
 ## API response as rendered on browser
-[<img src="screenshots/image_resized.png" height="700" width="400"/>](screenshots/image_resized.png)
+[<img src="screenshots/image_resized.png" height="500" width="200"/>](screenshots/image_resized.png)
 
 ## Author
 Sayantani Chaudhuri
