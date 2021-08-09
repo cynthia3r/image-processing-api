@@ -9,7 +9,7 @@ const inputFolder = 'images';
 const outputFolder = 'thumbnails';
 
 images.get('/', logger, (req, res) => {
-    res.send('image processed');
+  res.send('image processed');
 });
 
 export default images;
