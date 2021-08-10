@@ -70,7 +70,9 @@ images.get('/', logger, async (req: express.Request, res: express.Response) => {
   // then pull from disk on subsequent access attempts.
   try {
     const imageFile = Path.resolve(`${inputFolder}/${filename}.jpg`);
-    const thumbnailImageFile = Path.resolve(`${outputFolder}/${filename}.jpg`);
+    const thumbnailImageFile = Path.resolve(
+      `${outputFolder}/${filename}_${width}X${height}.jpg`
+    );
 
     // check if thumbnails folder and image file already exists
     if (
@@ -95,7 +97,7 @@ images.get('/', logger, async (req: express.Request, res: express.Response) => {
       try {
         await sharp(imageFile)
           .resize(parseInt(width), parseInt(height))
-          .toFile(`${outputFolder}/${filename}.jpg`);
+          .toFile(`${outputFolder}/${filename}_${width}X${height}.jpg`);
 
         console.log('sending newly processed thumbnail image');
       } catch (err) {
@@ -107,7 +109,9 @@ images.get('/', logger, async (req: express.Request, res: express.Response) => {
     }
 
     // send processed image in response
-    res.sendFile(Path.resolve(`${outputFolder}/${filename}.jpg`));
+    res.sendFile(
+      Path.resolve(`${outputFolder}/${filename}_${width}X${height}.jpg`)
+    );
   } catch (err) {
     console.log(err.message);
   }
