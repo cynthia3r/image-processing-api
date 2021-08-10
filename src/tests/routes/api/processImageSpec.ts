@@ -4,7 +4,7 @@ import app from '../../../index';
 import {
   checkPathExists,
   checkImageFileExists
-} from '../../../routes/api/processImage';
+} from '../../../utilities/imageProcessUtilities';
 
 const request = supertest(app);
 
